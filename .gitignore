@@ -1,0 +1,26 @@
+# Public information, manifest and icon only; implementation and tooling remain local.
+bin/
+obj/
+backups/
+docs/
+tests/
+xapr/
+build_protection/
+github_release/
+.agents/
+.codex/
+.claude/
+.claude-octopus/
+.vscode/
+.github/
+*.py
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/AethertekPluginManager/
+/AethertekPluginManager/*
+!/AethertekPluginManager/AethertekPluginManager.json
+!/AethertekPluginManager/images/
+/AethertekPluginManager/images/*
+!/AethertekPluginManager/images/icon.png
