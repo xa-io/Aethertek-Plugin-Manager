@@ -1,0 +1,7 @@
+Copyright (c) 2026 Aethertek. All rights reserved.
+
+Permission is granted to download and use official Aethertek Plugin Manager binary releases for personal use. No permission is granted to redistribute modified binaries or to copy, publish, sublicense, or sell the source implementation without written permission. Rights required by applicable law are unaffected.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. TO THE EXTENT PERMITTED BY LAW, THE AUTHORS ARE NOT LIABLE FOR DAMAGES ARISING FROM USE OF THE SOFTWARE.
+
+Third-party components retain their respective licenses. Dalamud and the .NET runtime are provided separately and are not bundled with this plugin. Obfuscar (MIT license) is used as an external build tool and is not distributed in the release.
