@@ -2,7 +2,7 @@
   "Author": "Aethertek",
   "Name": "Aethertek Plugin Manager",
   "InternalName": "AethertekPluginManager",
-  "AssemblyVersion": "0.0.0.4",
+  "AssemblyVersion": "0.0.0.5",
   "DalamudApiLevel": 15,
   "ApplicableVersion": "any",
   "Punchline": "Update manually installed plugins from trusted download links.",
