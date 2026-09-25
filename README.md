@@ -17,10 +17,12 @@ The ZIP filename must match the plugin, for example `PluginName.zip` or `PluginN
 
 ## One clipboard update button
 
-- **Private access package:** A matching Access DLL and private JSON go into `pluginConfigs/<PluginName>/tasks/`. Supported hosts are XA Zod, MOM, and DhogNav. Include the public plugin in APM and enable a compatible host first. Its public DLL and Dalamud manifest stay unchanged.
+- **Private access package:** A matching Access DLL and private JSON go into `pluginConfigs/<PluginName>/tasks/`. APM supports compatible hosts by their installed plugin identity and access IPC, without a fixed plugin-name list. Include the public plugin in APM and enable its compatible host first. Its public DLL and Dalamud manifest stay unchanged.
 - **Development package:** A matching plugin DLL and regular Dalamud JSON go into the matched existing development directory. Optional debug symbols are supported; bundled C# helper sources are skipped. A ZIP containing only the matching plugin DLL is also supported; its installed JSON is preserved.
 
 The JSON is inside the ZIP. Ordinary development plugins also use JSON, so APM checks its format and the DLL identity to choose the route. Invalid private packages are rejected before any files change. Historical signed Access-DLL-only packages still use their host's access folder.
+
+New compatible plugins do not require an APM release just to add their names. Their public host must provide the access directory and package-validation services. Adding a plugin to the repository feed or APM list alone does not supply these services; APM explains which endpoints are missing if a host is incompatible.
 
 **Check clipboard for updates** scans eligible APM registrations; hidden entries and disabled development plugins still qualify. A public host must be included and loaded to receive private access updates. Row selection is for details, removal, and resolving a duplicate-name match. **Reload plugin list** separately rereads Dalamud's registered plugins. There are no per-plugin update icons, selected-plugin update button, Advanced toggle, or Ctrl requirement. **Overwrite** remains available for an unchanged package. After an update, open the plugin to confirm its features initialized successfully.
 
