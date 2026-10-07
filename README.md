@@ -44,4 +44,6 @@ Private access ZIPs contain the access DLL and matching JSON. APM checks the ZIP
 
 **Already patched to this version** means the update identity is unchanged. Enable **Overwrite** to reinstall it.
 
+**Injection failed due to not being on Dalamud Release build** means the public host requires the release branch and refused the private update. Select the release branch in XIVLauncher, restart the game, and try again. Staging (`stg`) and API preview branches such as `api16` do not qualify; an unknown branch can also be refused. Overwrite does not bypass this requirement.
+
 For a failed download, copy a fresh direct link; Discord attachment links can expire. For other failures, check APM's status message and search `/xllog` for `[APM]`.
