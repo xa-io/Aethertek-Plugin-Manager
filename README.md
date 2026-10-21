@@ -44,6 +44,12 @@ Private access ZIPs contain the access DLL and matching JSON. APM checks the ZIP
 
 **Already patched to this version** means the update identity is unchanged. Enable **Overwrite** to reinstall it.
 
-**Injection failed due to not being on Dalamud Release build** means the public host requires the release branch and refused the private update. Select the release branch in XIVLauncher, restart the game, and try again. Staging (`stg`) and API preview branches such as `api16` do not qualify; an unknown branch can also be refused. Overwrite does not bypass this requirement.
+**Access package rejected:** APM shows the installed public plugin version and stable/testing channel when available, the access package version, and its declared public version. If the public versions differ, use the publisher's matching public release in Dalamud (`/xlplugins`) or request an access package for your installed version. A package intended for a testing release may not work with the stable release. The private package revision can differ from the public version; the host decides compatibility. APM does not change files when the host rejects a package, and **Overwrite** cannot bypass that rejection.
+
+If those versions already match, download a fresh package and check the host's own `/xllog` rejection with its publisher. Matching version labels alone do not guarantee compatibility. Hosts that return only a yes/no validation result cannot provide APM with an exact rejection reason.
+
+**Mismatched DLL/JSON or older package:** APM reports the available version details and explains whether to download a complete matching ZIP or a newer build. Do not edit version numbers or mix files from different releases. Expected validation rejections have a readable warning in `/xllog`; technical details remain available at debug level. Recovery failures continue to report an error.
+
+**Injection failed due to not being on Dalamud Release build** means the public host requires the release branch and refused the private update. Errors appear in red directly below **Check clipboard for updates**. Select the release branch in XIVLauncher, restart the game, and try again. Staging (`stg`) and API preview branches such as `api16` do not qualify; an unknown branch can also be refused. Overwrite does not bypass this requirement.
 
 For a failed download, copy a fresh direct link; Discord attachment links can expire. For other failures, check APM's status message and search `/xllog` for `[APM]`.
